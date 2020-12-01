@@ -1,4 +1,16 @@
+
+
+/**
+
+
 pragma solidity ^0.4.0;
+
+
+/** Contract for defining the the address property along with alias name 
+consist of the addresses and their alianses . 
+@ param :  addressing
+
+**/
 
 contract AddressBook {
     mapping(address => address[]) private _addresses;
