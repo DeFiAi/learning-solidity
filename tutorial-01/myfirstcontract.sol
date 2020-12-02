@@ -1,3 +1,7 @@
+
+
+
+"""
 pragma solidity ^0.5.0;
 
 contract MyFirstContract {
@@ -20,3 +24,7 @@ contract MyFirstContract {
         return age;
     }
 }
+
+"""
+
+this contract  sets the corresponding parameters for name and age and also can be used to retrive the information committed.
