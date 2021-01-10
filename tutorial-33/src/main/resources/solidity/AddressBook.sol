@@ -6,24 +6,38 @@
 pragma solidity ^0.4.0;
 
 
-/** Contract for defining the the address property along with alias name 
+/** @title: i want an  Contract for defining the the address property along with alias name 
 consist of the addresses and their alianses . 
-@ param :  addressing
-
+@param : 1. _addresses : address  for the particular entity 
+2.  _aliases : associated  identity for the function 
 **/
-
 contract AddressBook {
     mapping(address => address[]) private _addresses;
     mapping(address => mapping(address => string)) private _aliases;
 
+
+    /// returns the adress of owner 
+    /// @param address array  storing all the adresses of the id.
+    /// @dev retrives the value of address with address of msg.sender
+    /// @return address for the given entity . 
     function getAddresses() public view returns (address[]) {
         return _addresses[msg.sender];
     }
+
+    /// creates the new address 
+    /// @dev 
+    /// @return 
+
 
     function addAddress(address addr, string alias) public {
         _addresses[msg.sender].push(addr);
         _aliases[msg.sender][addr] = alias;
     }
+
+    /// 
+    /// @dev 
+    /// @return 
+
 
     function removeAddress(address addr) public {
         uint length = _addresses[msg.sender].length;
