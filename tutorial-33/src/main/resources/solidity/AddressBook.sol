@@ -25,8 +25,8 @@ contract AddressBook {
     }
 
     /// creates the new address 
-    /// @dev 
-    /// @return 
+    /// @dev  adds the record for given id and address  of the user 
+    /// @return  
 
 
     function addAddress(address addr, string alias) public {
@@ -34,8 +34,8 @@ contract AddressBook {
         _aliases[msg.sender][addr] = alias;
     }
 
-    /// 
-    /// @dev 
+    ///  removing the address from the addressbook
+    /// @dev delete the _addresses  and _aliases based on the given addr . 
     /// @return 
 
 
@@ -53,6 +53,11 @@ contract AddressBook {
             }
         }
     }
+ 
+    /// get the identity 
+    /// @dev  
+    /// @return aliases id of the contract owner and address . 
+   
 
     function getAlias(address addr) public view returns (string) {
         return _aliases[msg.sender][addr];
